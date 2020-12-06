@@ -23,30 +23,30 @@ export default {
       name: "",
       profile: "",
       email: "",
-      password: ""
+      password: "",
     };
   },
   components: {
-    HeaderAuth
+    HeaderAuth,
   },
   methods: {
     auth() {
       axios
-        .post("https://ancient-reaches-03882.herokuapp.com/api/register", {
+        .post("https://fast-citadel-93836.herokuapp.com/api/register", {
           name: this.name,
           profile: this.profile,
           email: this.email,
-          password: this.password
+          password: this.password,
         })
-        .then(response => {
+        .then((response) => {
           console.log(response);
           this.$router.replace("/");
         })
-        .catch(error => {
+        .catch((error) => {
           alert(error);
         });
-    }
-  }
+    },
+  },
 };
 </script>
 

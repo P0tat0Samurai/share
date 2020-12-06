@@ -38,7 +38,7 @@ export default {
     edit() {
       if (!this.active) {
         axios
-          .put("https://ancient-reaches-03882.herokuapp.com/api/user", {
+          .put("https://fast-citadel-93836.herokuapp.com/api/user", {
             email: this.$store.state.user.email,
             profile: this.profile,
           })
