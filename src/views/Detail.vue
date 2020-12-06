@@ -41,7 +41,7 @@ export default {
   methods: {
     send() {
       axios
-        .post("herokuのURL/api/comment", {
+        .post("https://git.heroku.com/ancient-reaches-03882.git/api/comment", {
           share_id: this.id,
           user_id: this.$store.state.user.id,
           content: this.content,
@@ -57,7 +57,7 @@ export default {
     },
     comment() {
       axios
-        .get("herokuのURL/api/shares/" + this.id)
+        .get("https://git.heroku.com/ancient-reaches-03882.git/api/shares/" + this.id)
         .then((response) => {
           this.data = response.data.comment;
         });
