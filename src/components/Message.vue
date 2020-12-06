@@ -4,12 +4,12 @@
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
-          <img class="icon" src="../assets/heart.png" @click="fav(key)" alt />
+          <img class="icon" src="../assets/heart.png" @click="fav(index)" alt />
           <p class="number">{{ value.like.length }}</p>
           <img
             class="icon"
             src="../assets/cross.png"
-            @click="del(key)"
+            @click="del(index)"
             alt
             v-if="path && profile"
           />
