@@ -34,7 +34,7 @@ export default {
   props: ["id"],
   data() {
     return {
-      comment: "",
+      content: "",
       data: "",
     };
   },

@@ -101,7 +101,7 @@ export default {
       const shares = await axios.get(
         "herokuのURL/api/shares"
       );
-      for (const i = 0; i < shares.data.data.length; i++) {
+      for (let i = 0; i < shares.data.data.length; i++) {
         await axios
           .get(
             "herokuのURL/api/shares/" +
