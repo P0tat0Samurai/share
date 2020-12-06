@@ -1,18 +1,18 @@
 <template>
   <div>
-    <div v-for="(value, key, index) in shares" :key="index">
+    <div v-for="(value, index) in shares" :key="index">
       <div class="message">
         <div class="flex">
-          <p class="name">{{value.name}}</p>
-          <img class="icon" src="../assets/heart.png" @click="fav(key)" alt/>
-          <p class="number">{{value.like.length}}</p>
+          <p class="name">{{ value.name }}</p>
+          <img class="icon" src="../assets/heart.png" @click="fav(key)" alt />
+          <p class="number">{{ value.like.length }}</p>
           <img
             class="icon"
             src="../assets/cross.png"
             @click="del(key)"
             alt
             v-if="path && profile"
-           />
+          />
           <img
             class="icon detail"
             src="../assets/detail.png"
@@ -26,7 +26,7 @@
             v-if="profile"
           />
         </div>
-        <p class="text">{{value.share}}</p>
+        <p class="text">{{ value.item.share }}</p>
       </div>
     </div>
   </div>

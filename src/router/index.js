@@ -7,7 +7,6 @@ import Profile from "../views/Profile.vue";
 import Detail from "../views/Detail.vue";
 import store from "../store/index";
 
-
 Vue.use(VueRouter);
 
 const routes = [
@@ -25,17 +24,26 @@ const routes = [
     path: "/home",
     name: "Home",
     component: Home,
+    meta: {
+      requiresAuth: true,
+    },
   },
   {
     path: "/detail/:id",
     name: "detail",
     component: Detail,
+    meta: {
+      requiresAuth: true,
+    },
     props: true,
   },
   {
     path: "/profile",
     name: "profile",
     component: Profile,
+    meta: {
+      requiresAuth: true,
+    },
   },
 ];
 
